@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(6, 6, 73);
+        }
+        #page {
+            margin: auto;
+            width: 1000px;
+        }
+        #bar{
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: white;
+            position: fixed;
+            padding-left: 165px;
+            padding-right: 165px;
+            box-shadow: 0 1px 10px 3px rgb(6, 6, 73);
+            z-index: 99;
+        }
+        #bar ol li { 
+            list-style-type: none;
+            margin: 10px 10px;
+            padding: 10px 10px;
+            float: right;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        #bar ol a:hover li {
+            color: rgb(255, 174, 0);
+            stroke: black;
+        }
+        #img {        
+            background: rgba(35, 30, 50, 0.5) url(images/images/back2.jpg);
+            /* background-attachment: fixed; */
+            background-blend-mode: darken;
+            height: 300px;
+            background-position: 0 -250px;
+            background-size: cover;
+            text-align: center;
+            padding-top: 120px;
+            color: white;
+        }
+        /* #img h1{
+            font-weight: 500;
+        } */
+        #content {
+            text-align: center;
+            padding-top: 90px;
+        }
+        #feature {
+            display: flex;
+            padding-top: 20px;
+            justify-content: space-around;
+        }
+        #feature p {
+            margin-top: 10px;
+        }
+        .one {
+            background-color: #f5f5f5cb;
+            width: 300px;
+        }
+        .two {
+            background-color: #f5f5f5cb;
+            width: 300px;
+        }
+        .three {
+            background-color: #f5f5f5cb;
+            width: 300px;
+        }
+        .four {
+            background-color: #f5f5f5cb;
+            width: 300px;
+        }
+        .five {
+            background-color: #f5f5f5cb;
+            width: 300px;
+        }
+        .six {
+            background-color: #f5f5f5cb;
+            width: 300px;
+        }
+        #courses {
+            display: flex;
+            padding-top: 20px;
+            justify-content: space-around;
+        }
+        #padding {
+            padding: 10px 10px;
+            height: 75px;
+        }
+        .star {
+            display: flex;
+            align-items: flex-start;
+        }
+        #button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 5px;
+            margin: 0 495px;
+            padding-top: 20px;
+        }
+        #button #learn button{
+            background-color: rgb(6, 6, 73);
+            width: fit-content;
+            padding: 10px 30px;
+            border-radius: 10px;
+            color: white;
+            border: 0 solid;
+        }
+        #button #learn button:hover {
+            background-color: white;
+            color: rgb(6, 6, 73);
+        }
+        #button #visit button{
+            background-color:rgb(255, 174, 0);
+            width: fit-content;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: 0 solid;
+        }
+        #button #visit button:hover {
+            background-color: white;
+            color: rgb(255, 174, 0);
+        }
+        #courses .one .price{
+            background-color: #2626a5;
+            color: white;
+            border-radius: 50%;
+            font-size: 17px;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 398px;
+            top: 1115px;
+        }
+        #courses .two .price{
+            background-color: #2626a5;
+            color: white;
+            border-radius: 50%;
+            font-size: 17px;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 733px;
+            top: 1115px;
+        }
+        #courses .three .price{
+            background-color: #2626a5;
+            color: white;
+            border-radius: 50%;
+            font-size: 17px;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 1063px;
+            top: 1115px;
+        }
+        .courses .four .price{
+            background-color: #2626a5;
+            color: white;
+            border-radius: 50%;
+            font-size: 17px;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 398px;
+            top: 1490px;
+        }
+        .courses .five .price{
+            background-color: #2626a5;
+            color: white;
+            border-radius: 50%;
+            font-size: 17px;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 733px;
+            top: 1490px;
+        }
+        .courses .six .price{
+            background-color: #2626a5;
+            color: white;
+            border-radius: 50%;
+            font-size: 17px;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 1063px;
+            top: 1490px;
+        }
+        .courses{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #register{
+            background-image: url(images/images/signup.jpg);
+            background-size: cover;
+            height: 550px;
+            background-position: 0 -150px;
+            background-color: rgba(28, 38, 82, 0.603);
+            background-blend-mode: color-dodge;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bar">
+        <ol>
+            <a href=""><li>Contatct</li></a>
+            <a href=""><li>Courses</li></a>
+            <a href=""><li>Blog</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Home</li></a>
+        </ol>
+        <img src="images/images/logo.svg" alt="logocoy" style="width: auto;height: 45px;padding-top: 10px;padding-bottom: 0;padding-right: 402.5px;">
+    </div><br>
+    <div id="img">
+            <h1 style="line-height: 70px;">Tingkatkan Masa Depan Dengan TechEduca</h1>
+            <p style="line-height: 25px;"> TechEduca mempersiapkan Anda untuk menghadapi tantangan karir di era digital. TechEduca<br>menyediakan semua yang Anda butuhkan untuk sukses</p>
+            <div id="button">
+                <div id="learn">
+                    <button>Learn More</button>
+                </div>
+                <div id="visit">
+                    <button>Visit Courses</button>
+                </div>
+            </div>
+            <p></p>
+    </div>
+    <div id="page">
+        <div id="content">
+            <h1>Awesome Feature</h1>
+            <p style="line-height: 30px;">Replenish man have thing gethering lights yielding shall you</p>
+        </div>
+        <div id="feature">
+            <div class="one">
+                <img src="images/images/hat.png" alt="hat" style="width: 45px;padding-top: 5px;padding-left: 5px;">
+                <h3 style="line-height: 30px;">Schoolartship Facility</h3>
+                <p style="font-size: small;line-height: 20px;">One make creepth, man bearing theira<br>firmament wont great heaven</p>
+            </div>
+            <div class="two">
+                <img src="images/images/teacher.png" alt="teacher" style="width: 45px;padding-top: 5px;padding-left: 5px;">
+                <h3 style="line-height: 30px;">Dell Online Cource</h3>
+                <p style="font-size: small;line-height: 20px;">One make creepth, man bearing theira<br>firmament wont great heaven</p>
+            </div>
+            <div class="three">
+                <img src="images/images/medal.png" alt="medal" style="width: 45px;padding-top: 5px;padding-left: 5px;">
+                <h3 style="line-height: 30px;">Global Certification</h3>
+                <p style="font-size: small;line-height: 20px;">One make creepth, man bearing theira<br>firmament wont great heaven</p>
+            </div>
+        </div>
+        <div id="content">
+            <h1>Our Popular Courses</h1>
+            <p style="line-height: 30px;">Replenish man have thing gethering lights yielding shall you</p>
+        </div>
+        <div id="courses">
+            <div class="one">
+                <img src="images/images/c1.jpg" alt="Javascript" style="width: 300px;height:200px;">
+                <div id="padding">
+                    <p style="color: #727272;font-size: small;">Update 21/08/21</p>
+                    <p><b>Javascript Beginners Couses</b></p>
+                    <div class="star">
+                        <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                        <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                        <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                        <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                        <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;"> 
+                        <p style="color: #727272;font-size: small;">(239)</p>
+                    </div>
+                    <p class="price">$49.99</p>
+                </div>
+            </div>
+            <div class="two">
+                <img src="images/images/c2.jpg" alt="CSS" style="width: 300px;height:200px;">
+                <div id="padding">
+                    <p style="color: #727272;font-size: small;">Update 10/09/21</p>
+                <p><b>CSS Beginners Couses</b></p>
+                <div class="star">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <p style="color: #727272;font-size: small;">(239)</p>
+                </div>
+                <p class="price">$15.00</p>
+                </div>
+            </div>
+            <div class="three">
+                <img src="images/images/c3.jpg" alt="Python" style="width: 300px;height: 200px;">
+                <div id="padding">
+                    <p style="color: #727272;font-size: small;">Update 21/08/21</p>
+                <p><b>Python Beginners Couses</b></p>
+                <div class="star">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <p style="color: #727272;font-size: small;">(150)</p>
+                </div>
+                <p class="price">$20.00</p>
+                </div>
+            </div>
+        </div><br><br><br>
+        <div class="courses">
+            <div class="four">
+                <img src="images/images/c4.jpg" alt="Graphic Design" style="width: 300px;height:200px;">
+                <div id="padding">
+                    <p style="color: #727272;font-size: small;">Update 15/10/21</p>
+                <p><b>Graphic Design Couses</b></p>
+                <div class="star">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <p style="color: #727272;font-size: small;">(175)</p>
+                </div>
+                <p class="price">$25.99</p>
+                </div>
+            </div>
+            <div class="five">
+                <img src="images/images/c5.jpg" alt="php" style="width: 300px;height:200px;">
+                <div id="padding">
+                    <p style="color: #727272;font-size: small;">Update 21/08/21</p>
+                <p><b>PHP Beginners Couses</b></p>
+                <div class="star">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <p style="color: #727272;font-size: small;">(220)</p>
+                </div>
+                <p class="price">$20.99</p>
+                </div>
+            </div>
+            <div class="six">
+                <img src="images/images/c6.jpg" alt="Angular" style="width: 300px;height:200px;">
+                <div id="padding">
+                    <p style="color: #727272;font-size: small;">Update 21/08/21</p>
+                <p><b>Angular Beginners Couses</b></p>
+                <div class="star">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <img src="images/star.png" alt="star" style="width: 13px;padding-right: 5px;">
+                    <p style="color: #727272;font-size: small;">(235)</p>
+                </div>
+                <p class="price">$20.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="register">
+        
+    </div>
+</body>
+</html>
